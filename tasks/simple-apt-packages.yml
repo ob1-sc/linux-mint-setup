@@ -1,0 +1,17 @@
+- name: Install apt packages
+  apt: name={{item}}
+  with_items:
+    - htop
+    - gdebi
+    - vim
+    - tree
+    - ubuntu-wallpapers*
+    - xclip
+
+- name: Remove useless packages from the cache
+  apt:
+    autoclean: yes
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
