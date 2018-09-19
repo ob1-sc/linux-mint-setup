@@ -1,1 +1,1 @@
-ansible ALL=(ALL) NOPASSWD: /usr/bin/ansible-pull
+ansible ALL=(ALL) NOPASSWD: ALL
