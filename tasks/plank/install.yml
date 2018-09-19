@@ -1,8 +1,8 @@
-- name: Install Plank Repository
-  become: true
-  apt_repository:
-    repo: ppa:ricotz/docky
-    state: present
+# - name: Install Plank Repository
+#   become: true
+#   apt_repository:
+#     repo: ppa:ricotz/docky
+#     state: present
 
 - name: Install Plank
   become: true
