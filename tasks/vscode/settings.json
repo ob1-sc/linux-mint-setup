@@ -5,5 +5,7 @@
     "workbench.iconTheme": "vscode-icons",
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "git.confirmSync": false
+
 }
