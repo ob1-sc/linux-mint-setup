@@ -1,13 +1,15 @@
 - hosts: localhost
-  become: true
+  # become: true
   pre_tasks:
     - name: update repositories
+      become: true
       apt: update_cache=yes
       changed_when: False
 
   tasks:
+    # - include: tasks/test.yml   
     - script: scripts/git-user-setup.sh
     - include: tasks/simple-apt-packages.yml
     - include: tasks/users.yml
     - include: tasks/cron-jobs.yml
-    - include: tasks/sublime-text-3.yml
+    - include: tasks/vscode/install.yml

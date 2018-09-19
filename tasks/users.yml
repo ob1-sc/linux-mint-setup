@@ -1,5 +1,10 @@
-- name: create ansible user
+- name: Create ansible user
   user: name=ansible uid=900
 
-- name: copy sudoers_ansible
-  copy: src=files/sudoers-ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
+- name: Add ansible user to sudoes
+  copy: 
+    src: files/sudoers-ansible
+    dest: /etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
