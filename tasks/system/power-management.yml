@@ -2,3 +2,9 @@
   become: true
   apt:
     name: tlp
+
+- name: Set monitor refresh rate
+  become_user: siobrien
+  copy:
+    src: tasks/system/monitors.xml
+    dest: ~/.config
