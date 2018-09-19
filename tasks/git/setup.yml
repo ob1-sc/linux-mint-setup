@@ -1,0 +1,5 @@
+- name: Setup git config
+  become_user: siobrien
+  copy:
+    src: tasks/git/.gitconfig
+    dest: ~/
