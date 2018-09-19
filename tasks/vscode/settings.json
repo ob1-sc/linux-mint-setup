@@ -1,5 +1,8 @@
 {
     "explorer.confirmDelete": false,
     "window.zoomLevel": 1,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.presets.hideExplorerArrows": true,
+    "vsicons.presets.foldersAllDefaultIcon": true
 }

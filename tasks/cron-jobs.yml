@@ -3,4 +3,4 @@
     user: siobrien 
     name: "ansible provision" 
     minute: "*/10" 
-    job: "/usr/bin/ansible-pull -o -U https://github.com/ob1-sc/mint-blade-laptop-setup.git > /dev/null"
+    job: "/usr/bin/ansible-pull -o -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git > /dev/null"
