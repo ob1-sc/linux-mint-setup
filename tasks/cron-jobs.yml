@@ -16,5 +16,5 @@
     user: ansible
     name: "ansible provision"
     minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git"
+    job: "/usr/bin/ansible-pull -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git"
     #job: "/usr/bin/ansible-pull -o -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git > /dev/null"
