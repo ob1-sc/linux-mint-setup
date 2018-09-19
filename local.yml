@@ -1,5 +1,5 @@
 - hosts: localhost
-  # become: true
+  become: true
   pre_tasks:
     - name: update repositories
       become: true
@@ -7,8 +7,12 @@
       changed_when: False
 
   tasks:
-    # - include: tasks/test.yml   
-    - script: scripts/git-user-setup.sh
+    # - include: tasks/test.yml  
+    - name: Install Visual Studio Code Extensions
+      become: true
+      become_user: siobrien
+      script: scripts/git-user-setup.sh
+      
     - include: tasks/simple-apt-packages.yml
     - include: tasks/users.yml
     - include: tasks/cron-jobs.yml
