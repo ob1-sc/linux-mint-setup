@@ -1,0 +1,4 @@
+- name: Install TLP
+  become: true
+  apt:
+    name: tlp

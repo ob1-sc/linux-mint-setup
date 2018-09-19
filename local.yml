@@ -8,11 +8,9 @@
   tasks:
     # - include: tasks/test.yml  
     - name: Setup git user preferences
-      # become: true
-      # become_user: siobrien
       script: scripts/git-user-setup.sh
       
     - include: tasks/simple-apt-packages.yml
-    # - include: tasks/users.yml
     - include: tasks/cron-jobs.yml
     - include: tasks/vscode/install.yml
+    - include: tasks/system/power-management.yml
