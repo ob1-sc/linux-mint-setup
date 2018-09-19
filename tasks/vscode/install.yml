@@ -1,12 +1,13 @@
 - name: Install Visual Studio Code
-  become: true
   apt:
     deb: https://go.microsoft.com/fwlink/?LinkID=760868
 
 - name: Install Visual Studio Code Extensions
+  become_user: siobrien
   script: tasks/vscode/install-extensions.sh
 
 - name: Install Visual Studio Code User Settings
+  become_user: siobrien
   copy: 
     src: tasks/vscode/settings.json
     dest: ~/.config/Code/User/

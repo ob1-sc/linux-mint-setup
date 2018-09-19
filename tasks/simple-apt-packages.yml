@@ -1,5 +1,4 @@
 - name: Install apt packages
-  become: true
   apt: name={{item}}
   with_items:
     - htop
@@ -10,17 +9,14 @@
     - xclip
 
 - name: Install deb packages
-  become: true
   apt: deb={{item}}
   with_items:
     - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 - name: Remove useless packages from the cache
-  become: true
   apt:
     autoclean: yes
 
 - name: Remove dependencies that are no longer required
-  become: true
   apt:
     autoremove: yes
