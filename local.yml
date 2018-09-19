@@ -1,5 +1,4 @@
 - hosts: localhost
-  become: true
   pre_tasks:
     - name: update repositories
       become: true
@@ -8,7 +7,7 @@
 
   tasks:
     # - include: tasks/test.yml  
-    - name: Install Visual Studio Code Extensions
+    - name: Setup git user preferences
       become: true
       become_user: siobrien
       script: scripts/git-user-setup.sh
