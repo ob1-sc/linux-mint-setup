@@ -7,5 +7,6 @@
     "vsicons.presets.foldersAllDefaultIcon": true,
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "workbench.colorTheme": "Afterglow Remastered"
 }
