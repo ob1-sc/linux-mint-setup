@@ -8,5 +8,7 @@
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "editor.fontSize": 12,
-    "workbench.colorTheme": "Afterglow Remastered"
+    "workbench.colorTheme": "Afterglow Remastered",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontWeightBold": "normal"
 }
