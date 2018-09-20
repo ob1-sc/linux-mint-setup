@@ -8,5 +8,5 @@
       changed_when: False
 
   tasks:
-    - include: tasks/cron-jobs.yml
-    - include: tasks/test.yml
+    - include: tasks/cron/setup.yml
+    - include: tasks/git/setup.yml
