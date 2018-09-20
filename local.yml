@@ -12,4 +12,6 @@
     - include: tasks/git/setup.yml
     - include: tasks/misc/apt-packages.yml
     - include: tasks/vscode/install.yml
+    - include: tasks/system/power-management.yml
+
 
