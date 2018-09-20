@@ -15,4 +15,5 @@
   cron:
     user: ansible
     name: "ansible provision"
-    job: "/usr/bin/ansible-pull -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git -C clean >> /home/ansible/mint-blade-laptop-setup.log 2>&1"
+    minute: "*/10"
+    job: "/usr/bin/ansible-pull -o -v -U https://github.com/ob1-sc/mint-blade-laptop-setup.git -C clean >> /home/ansible/mint-blade-laptop-setup.log 2>&1"
