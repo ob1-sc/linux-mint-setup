@@ -10,4 +10,4 @@
   become_user: siobrien
   copy: 
     src: tasks/vscode/settings.json
-    dest: /home/sobrien/.config/Code/User/
+    dest: /home/siobrien/.config/Code/User/
