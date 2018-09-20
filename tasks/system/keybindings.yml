@@ -1,5 +1,5 @@
 - name: Setup Preferred Keybindings
-  become_user: siobrien
+  become: true
   command: gsettings set org.cinnamon.desktop.keybindings.wm {{item.key}} "{{item.binding}}"
   loop:
     - { key: "maximize", binding: "['<Alt><Super>Down']" }
