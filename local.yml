@@ -10,3 +10,5 @@
   tasks:
     - include: tasks/cron/setup.yml
     - include: tasks/git/setup.yml
+    - include: tasks/misc/apt-packages.yml
+
