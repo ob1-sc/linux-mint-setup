@@ -1,9 +1,3 @@
-# - name: Setup Preferred Keybindings
-#   become: true
-#   command: dbus-launch gsettings set org.cinnamon.desktop.keybindings.wm {{item.key}} "{{item.binding}}"
-#   loop:
-#     - { key: "maximize", binding: "['<Alt><Super>Up']" }
-
 - name: Setup Preferred Keybindings
   become_user: siobrien
   script: tasks/system/setup-keybindings.sh
