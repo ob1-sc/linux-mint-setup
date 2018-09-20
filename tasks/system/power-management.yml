@@ -4,7 +4,7 @@
     name: tlp
 
 - name: Configure TLP
-  become_user: siobrien
+  become: true
   copy:
     src: tasks/system/tlp
     dest: /etc/default
