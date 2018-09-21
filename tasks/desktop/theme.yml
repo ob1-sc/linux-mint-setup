@@ -1,0 +1,10 @@
+- name: Add Papirus apt repositories
+  apt_repository:
+    repo: ppa:papirus/papirus
+
+- name: Install Papirus
+  apt:
+    name: papirus-icon-theme
+
+# TODO:
+# - set panel height
