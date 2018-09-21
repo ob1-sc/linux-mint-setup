@@ -1,6 +1,7 @@
 - name: Add Papirus apt repositories
   apt_repository:
     repo: ppa:papirus/papirus
+    codename: bionic
 
 - name: Install Papirus
   apt:
