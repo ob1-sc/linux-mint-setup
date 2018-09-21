@@ -7,6 +7,7 @@
     - tree
     - ubuntu-wallpapers*
     - xclip
+    - tmux
 
 - name: Install deb packages
   apt: deb={{item}}

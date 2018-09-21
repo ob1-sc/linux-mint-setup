@@ -1,3 +1,0 @@
-- name: Setup Preferred Keybindings
-  become_user: siobrien
-  script: tasks/desktop/setup-keybindings.sh
