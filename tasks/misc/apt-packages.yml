@@ -3,7 +3,6 @@
   with_items:
     - htop
     - gdebi
-    - vim
     - tree
     - ubuntu-wallpapers*
     - xclip

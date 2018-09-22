@@ -1,0 +1,9 @@
+- name: Install Vim
+  apt:
+    name: vim
+
+- name: Setup Vim
+  become_user: siobrien
+  copy:
+    src: tasks/apps/vim/.vimrc
+    dest: /home/siobrien/
