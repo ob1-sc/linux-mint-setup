@@ -1,0 +1,17 @@
+- name: Install Plank
+  apt:
+    name: plank
+
+- name: Add Plank to startup apps
+  become_user: siobrien
+  copy:
+    src: /usr/share/applications/plank.desktop
+    dest: /home/siobrien/.config/autostart
+    mode: 0664
+
+- name: Setup Plank
+  become_user: siobrien
+  script: tasks/desktop/setup-plank.sh
+
+# TODO:
+# 1) add apps to plank

@@ -14,6 +14,7 @@
     - include: tasks/vscode/install.yml
     - include: tasks/system/power-management.yml
     - include: tasks/desktop/setup.yml
+    - include: tasks/desktop/plank.yml
 
 
 

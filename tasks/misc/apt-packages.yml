@@ -8,7 +8,6 @@
     - ubuntu-wallpapers*
     - xclip
     - tmux
-    - plank
 
 - name: Install deb packages
   apt: deb={{item}}
