@@ -10,4 +10,4 @@ dconf write /net/launchpad/plank/docks/dock1/position 'left'
 dconf write /net/launchpad/plank/docks/dock1/hide-delay 300
 
 # setup plank launchers
-# rm -rf /home/siobrien/.config/plank/*
+# rm -rf /home/siobrien/.config/plank/dock1/*
