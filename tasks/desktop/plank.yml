@@ -12,6 +12,3 @@
 - name: Setup Plank
   become_user: siobrien
   script: tasks/desktop/setup-plank.sh
-
-# TODO:
-# 1) add apps to plank
