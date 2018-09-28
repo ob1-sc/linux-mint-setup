@@ -13,6 +13,7 @@
     - include: tasks/misc/apt-packages.yml
     - include: tasks/apps/vscode/install.yml
     - include: tasks/apps/vim/install.yml
+    - include: tasks/apps/remmina/install.yml
     - include: tasks/system/power-management.yml
     - include: tasks/desktop/setup.yml
     - include: tasks/desktop/plank.yml

@@ -4,10 +4,10 @@
 
 - name: Install Visual Studio Code Extensions
   become_user: siobrien
-  script: tasks/vscode/install-extensions.sh
+  script: tasks/apps/vscode/install-extensions.sh
 
 - name: Install Visual Studio Code User Settings
   become_user: siobrien
-  copy: 
-    src: tasks/vscode/settings.json
+  copy:
+    src: tasks/apps/vscode/settings.json
     dest: /home/siobrien/.config/Code/User/
