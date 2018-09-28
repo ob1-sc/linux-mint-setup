@@ -1,0 +1,11 @@
+- name: Add Remmina PPA
+  apt_repository:
+    repo: ppa:remmina-ppa-team/remmina-next
+    codename: bionic
+
+- name: Install Remmina
+  apt: name={{item}}
+  with_items:
+    - remmina
+    - remmina-plugin-rdp
+    - libfreerdp-plugins-standard
