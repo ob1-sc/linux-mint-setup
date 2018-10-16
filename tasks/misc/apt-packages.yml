@@ -5,8 +5,10 @@
     - gdebi
     - tree
     - ubuntu-wallpapers*
+    - mint-backgrounds-*
     - xclip
     - tmux
+    - shutter
 
 - name: Install deb packages
   apt: deb={{item}}
