@@ -6,4 +6,4 @@
   become_user: "{{user}}"
   copy:
     src: tasks/apps/vim/.vimrc
-    dest: /home/siobrien/
+    dest: /home/{{user}}/
