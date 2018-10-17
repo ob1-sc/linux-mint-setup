@@ -3,12 +3,12 @@
     name: plank
 
 - name: Add Plank to startup apps
-  become_user: siobrien
+  become_user: "{{user}}"
   copy:
     src: /usr/share/applications/plank.desktop
-    dest: /home/siobrien/.config/autostart
+    dest: /home/{{user}}/.config/autostart
     mode: 0664
 
 - name: Setup Plank
-  become_user: siobrien
+  become_user: "{{user}}"
   script: tasks/desktop/setup-plank.sh

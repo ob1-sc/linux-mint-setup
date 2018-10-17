@@ -1,5 +1,5 @@
 - name: Setup git config
-  become_user: siobrien
+  become_user: "{{user}}"
   copy:
     src: tasks/git/.gitconfig
-    dest: /home/siobrien/
+    dest: /home/{{user}}/

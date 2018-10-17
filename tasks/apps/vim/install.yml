@@ -3,7 +3,7 @@
     name: vim
 
 - name: Setup Vim
-  become_user: siobrien
+  become_user: "{{user}}"
   copy:
     src: tasks/apps/vim/.vimrc
     dest: /home/siobrien/

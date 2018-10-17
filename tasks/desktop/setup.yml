@@ -1,7 +1,7 @@
 - name: Add Papirus apt repositories
   apt_repository:
     repo: ppa:papirus/papirus
-    codename: bionic
+    codename: "{{ubuntu_codename}}"
 
 - name: Install Papirus
   apt:
@@ -15,5 +15,5 @@
   command: papirus-folders -C green --theme Papirus-Dark
 
 - name: Setup Desktop Settings
-  become_user: siobrien
+  become_user: "{{user}}"
   script: tasks/desktop/setup-desktop.sh

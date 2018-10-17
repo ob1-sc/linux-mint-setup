@@ -15,7 +15,7 @@
     name: powertop
 
 - name: Set monitor refresh rate
-  become_user: siobrien
+  become_user: "{{user}}"
   copy:
     src: tasks/system/monitors.xml
-    dest: ~/.config
+    dest: /home/{{user}}/.config
