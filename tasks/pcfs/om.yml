@@ -15,5 +15,5 @@
 - name: Download om-cli
   get_url:
     url: "{{om_release_url}}"
-    dest: /usr/local/bin
+    dest: /usr/local/bin/om
     mode: 0755
