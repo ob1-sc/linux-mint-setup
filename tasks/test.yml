@@ -1,6 +1,12 @@
-- name: Create Test folder
-  # become: true
-  become_user: siobrien
-  file:
-    path: /home/siobrien/test/
-    state: directory
+# - name: Create Test folder
+#   # become: true
+#   become_user: siobrien
+#   file:
+#     path: /home/siobrien/test/
+#     state: directory
+
+- name: Get latest release of testuseer/testrepo
+  github_release:
+    repo: pivotal-cf/om
+    user: ob1-sc
+    action: latest_release
