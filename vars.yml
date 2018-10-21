@@ -2,3 +2,4 @@
 user: siobrien
 ubuntu_codename: bionic
 om_cli_version: latest
+pivnet_cli_version: latest
