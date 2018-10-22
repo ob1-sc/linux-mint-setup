@@ -1,5 +1,9 @@
 ---
 user: siobrien
 ubuntu_codename: bionic
-om_cli_version: latest
-pivnet_cli_version: latest
+om_cli:
+  repository: pivotal-cf/om
+  install_location: /usr/local/bin/om
+pivnet_cli:
+  repository: pivotal-cf/pivnet-cli
+  install_location: /usr/local/bin/pivnet

@@ -19,8 +19,16 @@
     - include: tasks/system/power-management.yml
     - include: tasks/desktop/setup.yml
     - include: tasks/desktop/plank.yml
-    - include: tasks/pcfs/om-cli.yml
-    - include: tasks/pcfs/pivnet-cli.yml
+
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+          repository: "{{om_cli.repository}}"
+          install_location: "{{_cli.install_location}}"
+
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+          repository: "{{pivnet_cli.repository}}"
+          install_location: "{{pivnet_cli.install_location}}"
 
 
 
