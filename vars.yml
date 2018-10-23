@@ -7,3 +7,8 @@ om_cli:
 pivnet_cli:
   repository: pivotal-cf/pivnet-cli
   install_location: /usr/local/bin/pivnet
+bosh_cli:
+  repository: cloudfoundry/bosh-cli
+  install_location: /usr/local/bin/bosh
+cf_cli:
+  install_location: /usr/local/bin
