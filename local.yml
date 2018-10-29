@@ -10,35 +10,35 @@
       changed_when: False
 
   tasks:
-    # - include: tasks/cron/setup.yml
-    # - include: tasks/git/setup.yml
-    # - include: tasks/misc/apt-packages.yml
-    # - include: tasks/apps/vscode/install.yml
-    # - include: tasks/apps/vim/install.yml
-    # - include: tasks/apps/remmina/install.yml
-    # - include: tasks/system/power-management.yml
-    # - include: tasks/desktop/setup.yml
-    # - include: tasks/desktop/plank.yml
+    - include: tasks/cron/setup.yml
+    - include: tasks/git/setup.yml
+    - include: tasks/misc/apt-packages.yml
+    - include: tasks/apps/vscode/install.yml
+    - include: tasks/apps/vim/install.yml
+    - include: tasks/apps/remmina/install.yml
+    - include: tasks/system/power-management.yml
+    - include: tasks/desktop/setup.yml
+    - include: tasks/desktop/plank.yml
 
-    # - include: tasks/pcfs/install-github-release.yml
-    #   vars:
-    #     repository: "{{om_cli.repository}}"
-    #     install_location: "{{om_cli.install_location}}"
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+        repository: "{{om_cli.repository}}"
+        install_location: "{{om_cli.install_location}}"
 
-    # - include: tasks/pcfs/install-github-release.yml
-    #   vars:
-    #     repository: "{{pivnet_cli.repository}}"
-    #     install_location: "{{pivnet_cli.install_location}}"
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+        repository: "{{pivnet_cli.repository}}"
+        install_location: "{{pivnet_cli.install_location}}"
 
-    # - include: tasks/pcfs/install-github-release.yml
-    #   vars:
-    #     repository: "{{bosh_cli.repository}}"
-    #     install_location: "{{bosh_cli.install_location}}"
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+        repository: "{{bosh_cli.repository}}"
+        install_location: "{{bosh_cli.install_location}}"
 
-    # - include: tasks/pcfs/install-github-release.yml
-    #   vars:
-    #     repository: "{{bbl_cli.repository}}"
-    #     install_location: "{{bbl_cli.install_location}}"
+    - include: tasks/pcfs/install-github-release.yml
+      vars:
+        repository: "{{bbl_cli.repository}}"
+        install_location: "{{bbl_cli.install_location}}"
 
-    # - include: tasks/pcfs/install-cf-cli.yml
+    - include: tasks/pcfs/install-cf-cli.yml
     - include: tasks/pcfs/install-terraform-cli.yml
