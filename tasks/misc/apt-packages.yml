@@ -9,6 +9,7 @@
     - xclip
     - tmux
     - shutter
+    - jq
 
 - name: Install deb packages
   apt: deb={{item}}

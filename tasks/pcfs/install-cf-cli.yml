@@ -30,7 +30,7 @@
 - name: Unpack cf cli archive
   unarchive:
     src: "{{temp_dir.path}}/cf.tgz"
-    dest: "{{install_location}}"
+    dest: "{{cf_cli.install_location}}"
     exclude: NOTICE,LICENSE
 
 - name: Delete temporary dir

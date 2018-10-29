@@ -12,3 +12,8 @@ bosh_cli:
   install_location: /usr/local/bin/bosh
 cf_cli:
   install_location: /usr/local/bin
+bbl_cli:
+  repository: cloudfoundry/bosh-bootloader
+  install_location: /usr/local/bin/bbl
+terraform_cli:
+  install_location: /usr/local/bin

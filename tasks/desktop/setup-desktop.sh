@@ -7,6 +7,7 @@ export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/en
 gsettings set org.cinnamon.desktop.keybindings.wm maximize "['<Alt><Super>Up']"
 gsettings set org.cinnamon.desktop.keybindings.wm unmaximize "['<Alt><Super>Down']"
 gsettings set org.cinnamon.desktop.keybindings.wm minimize "['<Shift><Alt><Super>Down']"
+gsettings set org.cinnamon.desktop.keybindings.media-keys www "['<Primary><Alt>w']"
 
 # set bottom panel height
 gsettings set org.cinnamon panels-resizable "['1:true']"
