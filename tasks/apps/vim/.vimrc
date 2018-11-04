@@ -17,4 +17,5 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
-colorscheme Monokai
+colorscheme 0x7A69_dark
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
