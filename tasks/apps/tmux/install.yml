@@ -1,12 +1,12 @@
-- name: Install Tmux 
+- name: Install Tmux
   apt:
-    name: tmux 
+    name: tmux
 
-- name: Install xclip 
+- name: Install xclip
   apt:
-    name: xclip 
-    
-- name: Setup Tmux 
+    name: xclip
+
+- name: Setup Tmux
   become_user: "{{user}}"
   copy:
     src: tasks/apps/tmux/.tmux.conf
