@@ -21,5 +21,8 @@ filetype plugin indent on    " required
 colorscheme gruvbox
 set background=dark    
 
+" linenumber settings
+set number
+
 " tab settings
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
