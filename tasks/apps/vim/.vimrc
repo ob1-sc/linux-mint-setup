@@ -10,12 +10,16 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'yggdroot/indentline'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
-colorscheme 0x7A69_dark
+" set the colorscheme
+colorscheme gruvbox
+set background=dark    
+
+" tab settings
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
