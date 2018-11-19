@@ -17,3 +17,5 @@ bbl_cli:
   install_location: /usr/local/bin/bbl
 terraform_cli:
   install_location: /usr/local/bin
+packer_cli:
+  install_location: /usr/local/bin

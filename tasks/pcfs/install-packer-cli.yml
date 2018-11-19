@@ -1,0 +1,43 @@
+---
+
+- name: Get Packer release info
+  uri:
+    url: "https://checkpoint-api.hashicorp.com/v1/check/packer"
+    return_content: yes
+    body_format: json
+  register: release_info
+
+- name: Get latest download version
+  set_fact:
+    download_version: "{{ release_info.json | json_query(json_filter) | replace('v','') }}"
+  vars:
+    - json_filter: current_version
+  when: packer_cli.version is not defined
+
+- name: Get specified download version
+  set_fact:
+    download_version: "{{packer_cli.version}}"
+  when: packer_cli.version is defined
+
+- name: Generate download url
+  set_fact:
+    cli_url: https://releases.hashicorp.com/packer/{{download_version}}/packer_{{download_version}}_linux_amd64.zip
+
+- debug:
+    msg: "Packer Download URL: {{cli_url}}"
+
+- name: Create temporary dir
+  tempfile:
+    state: directory
+    suffix: -packer-cli
+  register: temp_dir
+
+- name: Download packer cli archive
+  get_url:
+    url: "{{cli_url}}"
+    dest: "{{temp_dir.path}}/packer.zip"
+
+- name: Unpack packer cli archive
+  unarchive:
+    src: "{{temp_dir.path}}/packer.zip"
+    dest: "{{packer_cli.install_location}}"

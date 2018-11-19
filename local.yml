@@ -39,4 +39,5 @@
 
     - include: tasks/pcfs/install-cf-cli.yml
     - include: tasks/pcfs/install-terraform-cli.yml
+    - include: tasks/pcfs/install-packer-cli.yml
     - include: tasks/pcfs/install-bosh-cli.yml
