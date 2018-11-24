@@ -9,18 +9,23 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'elzr/vim-json'
 Plugin 'yggdroot/indentline'
 Plugin 'morhetz/gruvbox'
-Plugin 'elzr/vim-json'
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
-" set the colorscheme
-colorscheme gruvbox
+" set the colorscheme (silent in case colorscheme has not yet been installed,
+" ie first run before PluginInstall)
+:silent! colorscheme gruvbox
 set background=dark    
+
+" turn vim-json syntax conceal off (see quotes are shown)
+let g:vim_json_syntax_conceal = 0
 
 " linenumber settings
 set number
