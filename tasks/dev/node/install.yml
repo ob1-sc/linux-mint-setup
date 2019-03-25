@@ -1,0 +1,15 @@
+- name: Add an Node.js signing key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+- name: Add Node.js PPA
+  apt_repository:
+    repo: deb https://deb.nodesource.com/node_10.x "{{ubuntu_codename}}" main
+
+- name: Add Node.js Source PPA
+  apt_repository:
+    repo: deb-src https://deb.nodesource.com/node_10.x "{{ubuntu_codename}}" main
+
+- name: Install Node.js
+  apt:
+    name: nodejs
