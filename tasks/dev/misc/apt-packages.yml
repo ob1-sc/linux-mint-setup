@@ -1,0 +1,4 @@
+- name: Install apt packages
+  apt: name={{item}}
+  with_items:
+    - openjdk-11-jdk
