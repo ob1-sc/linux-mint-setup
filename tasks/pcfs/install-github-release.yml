@@ -20,7 +20,7 @@
   set_fact:
     release_url: "{{ release_info.json | to_json | from_json | json_query(json_filter) | join('') }}"
   vars:
-    - json_filter: assets[?contains(name, '{{ release_asset_filter | default('linux') }}')].browser_download_url
+    - json_filter: assets[?(contains(name, '{{ release_asset_filter | default('linux') }}') && !contains(name, 'tar'))].browser_download_url
 
 - debug:
     msg: "Downloading release from: {{release_url}}"
