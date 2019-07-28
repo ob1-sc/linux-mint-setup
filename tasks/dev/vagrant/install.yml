@@ -1,0 +1,42 @@
+---
+- name: Get Vagrant release info
+  uri:
+    url: "https://checkpoint-api.hashicorp.com/v1/check/vagrant"
+    return_content: yes
+    body_format: json
+  register: release_info
+
+- name: Get latest download version
+  set_fact:
+    download_version: "{{ release_info.json | json_query(json_filter) | replace('v','') }}"
+  vars:
+    - json_filter: current_version
+  when: vagrant.version is not defined
+
+- name: Get specified download version
+  set_fact:
+    download_version: "{{vagrant_cli.version}}"
+  when: vagrant_cli.version is defined
+
+- name: Generate download url
+  set_fact:
+    cli_url: https://releases.hashicorp.com/vagrant/{{download_version}}/vagrant_{{download_version}}_linux_amd64.zip
+
+- debug:
+    msg: "Vagrant Download URL: {{cli_url}}"
+
+- name: Create temporary dir
+  tempfile:
+    state: directory
+    suffix: -vagrant-cli
+  register: temp_dir
+
+- name: Download vagrant cli archive
+  get_url:
+    url: "{{cli_url}}"
+    dest: "{{temp_dir.path}}/vagrant.zip"
+
+- name: Unpack vagrant cli archive
+  unarchive:
+    src: "{{temp_dir.path}}/vagrant.zip"
+    dest: "{{vagrant_cli.install_location}}"

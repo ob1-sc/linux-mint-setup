@@ -1,0 +1,8 @@
+- name: Install PIP
+  apt:
+    name:
+      - python-pip
+
+- name: Install JMES PATH
+  pip:
+    name: jmespath

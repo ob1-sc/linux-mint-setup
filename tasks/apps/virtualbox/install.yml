@@ -8,4 +8,4 @@
 
 - name: Install Virtualbox
   apt:
-    name: virtualbox-5.2
+    name: virtualbox-6.0

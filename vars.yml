@@ -1,3 +1,5 @@
 ---
 user: siobrien
 ubuntu_codename: bionic
+vagrant_cli:
+  install_location: /usr/local/bin
