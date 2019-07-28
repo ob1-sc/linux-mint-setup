@@ -1,21 +1,3 @@
 ---
 user: siobrien
 ubuntu_codename: bionic
-om_cli:
-  repository: pivotal-cf/om
-  install_location: /usr/local/bin/om
-pivnet_cli:
-  repository: pivotal-cf/pivnet-cli
-  install_location: /usr/local/bin/pivnet
-bosh_cli:
-  repository: cloudfoundry/bosh-cli
-  install_location: /usr/local/bin/bosh
-cf_cli:
-  install_location: /usr/local/bin
-bbl_cli:
-  repository: cloudfoundry/bosh-bootloader
-  install_location: /usr/local/bin/bbl
-terraform_cli:
-  install_location: /usr/local/bin
-packer_cli:
-  install_location: /usr/local/bin
