@@ -4,8 +4,8 @@
     codename: "{{ubuntu_codename}}"
 
 - name: Install Remmina
-  apt: name={{item}}
-  with_items:
-    - remmina
-    - remmina-plugin-rdp
-    - libfreerdp-plugins-standard
+  apt:
+    name:
+      - remmina
+      - remmina-plugin-rdp
+      - libfreerdp-plugins-standard
