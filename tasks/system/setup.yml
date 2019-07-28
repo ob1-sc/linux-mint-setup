@@ -1,0 +1,2 @@
+- name: Set system time to local time
+  command: timedatectl set-local-rtc 1 --adjust-system-clock
