@@ -2,13 +2,13 @@
     "explorer.confirmDelete": false,
     "window.zoomLevel": 1,
     "git.autofetch": true,
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.presets.hideExplorerArrows": true,
-    "vsicons.presets.foldersAllDefaultIcon": true,
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "editor.fontSize": 12,
     "workbench.colorTheme": "Afterglow Remastered",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontWeightBold": "normal"
+    "terminal.integrated.fontWeightBold": "normal",
+    "files.autoSave": "afterDelay",
+    "vim.useSystemClipboard": true,
+    "workbench.iconTheme": "vscode-great-icons"
 }
