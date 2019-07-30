@@ -9,6 +9,5 @@
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontWeightBold": "normal",
     "files.autoSave": "afterDelay",
-    "vim.useSystemClipboard": true,
     "workbench.iconTheme": "vscode-great-icons"
 }
