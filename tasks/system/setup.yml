@@ -1,2 +1,6 @@
 - name: Set system time to local time
   command: timedatectl set-local-rtc 1 --adjust-system-clock
+
+- name: Setup Bash Aliases
+  become_user: "{{user}}"
+  script: tasks/system/setup-bash-aliases.sh
