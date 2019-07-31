@@ -18,6 +18,7 @@
     - include: tasks/dev/misc/apt-packages.yml
     - include: tasks/dev/node/install.yml
     - include: tasks/dev/vagrant/install.yml
+    - include: tasks/apps/insync/install.yml
     - include: tasks/apps/vscode/install.yml
     - include: tasks/apps/vim/install.yml
     - include: tasks/apps/tmux/install.yml

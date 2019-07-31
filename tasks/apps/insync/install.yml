@@ -1,0 +1,13 @@
+- name: Add insync Apt signing key
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: ACCAF35C
+
+- name: Add insync PPA
+  apt_repository:
+    repo: deb http://apt.insynchq.com/ubuntu "{{ubuntu_codename}}" non-free contrib
+
+- name: Install insync
+  apt:
+    name:
+      - insync
