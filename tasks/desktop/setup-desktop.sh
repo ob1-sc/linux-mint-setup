@@ -26,7 +26,6 @@ gsettings set org.cinnamon.desktop.wm.preferences num-workspaces 2
 # 3) Remove show desktop applet
 # 4) Add time/percentage to power icon applet
 # 5) Add Date to time applet
-# 6) Add Redshift
 # 7) Add World Clock/Remove default clock
 # 8) Remove User Applet
 # 9) Add Workspace Switcher
