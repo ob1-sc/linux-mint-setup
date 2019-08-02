@@ -9,5 +9,6 @@
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontWeightBold": "normal",
     "files.autoSave": "afterDelay",
-    "workbench.iconTheme": "vscode-great-icons"
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.multiCursorModifier": "ctrlCmd"
 }
