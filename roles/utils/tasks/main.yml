@@ -1,0 +1,15 @@
+- name: Install htop
+  apt:
+    name: htop
+
+- name: Install gdebi
+  apt:
+    name: gdebi
+
+- name: Install tree
+  apt:
+    name: tree
+
+- name: Install shutter
+  apt:
+    name: shutter

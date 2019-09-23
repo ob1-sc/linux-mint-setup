@@ -1,5 +1,9 @@
+- name: Install git
+  apt:
+    name: git
+
 - name: Setup git config
   become_user: "{{user}}"
   copy:
-    src: tasks/git/.gitconfig
+    src: files/.gitconfig
     dest: /home/{{user}}/

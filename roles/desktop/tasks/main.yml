@@ -1,0 +1,40 @@
+- name: Install Backgrounds
+  apt:
+    name:
+      - ubuntu-wallpapers*
+      - mint-backgrounds-*
+
+- name: Install Plank
+  apt:
+    name: plank
+
+- name: Add Plank to startup apps
+  become_user: "{{user}}"
+  copy:
+    src: /usr/share/applications/plank.desktop
+    dest: /home/{{user}}/.config/autostart
+    mode: 0664
+
+- name: Setup Plank
+  become_user: "{{user}}"
+  script: files/setup-plank.sh
+
+- name: Add Papirus apt repositories
+  apt_repository:
+    repo: ppa:papirus/papirus
+    codename: "{{ubuntu_codename}}"
+
+- name: Install Papirus
+  apt:
+    name: papirus-icon-theme
+
+- name: Install Papirus Folders
+  apt:
+    name: papirus-folders
+
+- name: Setup Papirus Folder Color
+  command: papirus-folders -C green --theme Papirus-Dark
+
+- name: Setup Desktop Settings
+  become_user: "{{user}}"
+  script: files/setup-desktop.sh
