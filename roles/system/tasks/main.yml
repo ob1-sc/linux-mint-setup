@@ -3,4 +3,4 @@
 
 - name: Setup Bash Aliases
   become_user: "{{user}}"
-  script: files/setup-bash-aliases.sh
+  script: tasks/system/setup-bash-aliases.sh

@@ -1,28 +1,49 @@
-- hosts: localhost
-  become: true
+---
+- name: setup linux mint
+  hosts: all
   vars_files:
     - vars.yml
+  become: true
 
   pre_tasks:
-    - name: update repositories
+    - name: upgrade apt repositories
       apt:
-        update_cache: yes
-      changed_when: False
+        update_cache: true
 
-  tasks:
-    - include: tasks/cron/setup.yml
-    - include: tasks/system/setup.yml
-    - include: tasks/git/setup.yml
-    - include: tasks/misc/apt-packages.yml
-    - include: tasks/dev/python/install.yml
-    - include: tasks/dev/misc/apt-packages.yml
-    - include: tasks/dev/node/install.yml
-    - include: tasks/dev/vagrant/install.yml
-    - include: tasks/apps/insync/install.yml
-    - include: tasks/apps/vscode/install.yml
-    - include: tasks/apps/vim/install.yml
-    - include: tasks/apps/tmux/install.yml
-    - include: tasks/apps/remmina/install.yml
-    - include: tasks/desktop/setup.yml
-    - include: tasks/desktop/plank.yml
-    - include: tasks/apps/virtualbox/install.yml
+  roles:
+    - system
+
+  post_tasks:
+    - name: cleanup apt packages
+      apt:
+        autoclean: true
+        autoremove: true
+
+# - hosts: localhost
+#   become: true
+#   vars_files:
+#     - vars.yml
+
+#   pre_tasks:
+#     - name: update repositories
+#       apt:
+#         update_cache: yes
+#       changed_when: False
+
+#   tasks:
+#     - include: tasks/cron/setup.yml
+#     - include: tasks/system/setup.yml
+#     - include: tasks/git/setup.yml
+#     - include: tasks/misc/apt-packages.yml
+#     - include: tasks/dev/python/install.yml
+#     - include: tasks/dev/misc/apt-packages.yml
+#     - include: tasks/dev/node/install.yml
+#     - include: tasks/dev/vagrant/install.yml
+#     - include: tasks/apps/insync/install.yml
+#     - include: tasks/apps/vscode/install.yml
+#     - include: tasks/apps/vim/install.yml
+#     - include: tasks/apps/tmux/install.yml
+#     - include: tasks/apps/remmina/install.yml
+#     - include: tasks/desktop/setup.yml
+#     - include: tasks/desktop/plank.yml
+#     - include: tasks/apps/virtualbox/install.yml
