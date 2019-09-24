@@ -19,6 +19,11 @@ gsettings set org.cinnamon favorite-apps "['google-chrome.desktop', 'org.gnome.T
 # set the number of workspaces
 gsettings set org.cinnamon.desktop.wm.preferences num-workspaces 2
 
+# set the number of theme
+gsettings set org.cinnamon.desktop.wm.preferences theme 'Mint-Y-Dark'
+gsettings set org.cinnamon.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.cinnamon.desktop.interface gtk-theme 'Mint-Y-Dark'
+gsettings set org.cinnamon.theme name 'Mint-Y-Dark'
 
 # TODO:
 # 1) change menu icon to ""
