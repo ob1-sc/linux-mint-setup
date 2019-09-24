@@ -17,6 +17,14 @@
     - utils
     - internet
     - collaboration
+    - virtualbox
+    - vscode
+    - insync
+    - remmina
+    - tmux
+    - vim
+    - vagrant
+    - node
 
   post_tasks:
     - name: cleanup apt packages
@@ -44,11 +52,11 @@
 #     - include: tasks/dev/misc/apt-packages.yml
 #     - include: tasks/dev/node/install.yml
 #     - include: tasks/dev/vagrant/install.yml
-#     - include: tasks/apps/insync/install.yml
-#     - include: tasks/apps/vscode/install.yml
-#     - include: tasks/apps/vim/install.yml
-#     - include: tasks/apps/tmux/install.yml
-#     - include: tasks/apps/remmina/install.yml
+#     - include: tasks/apps/insync/install.yml - DONE
+#     - include: tasks/apps/vscode/install.yml - DONE
+#     - include: tasks/apps/vim/install.yml - DONE
+#     - include: tasks/apps/tmux/install.yml - DONE
+#     - include: tasks/apps/remmina/install.yml - DONE
 #     - include: tasks/desktop/setup.yml - DONE
 #     - include: tasks/desktop/plank.yml - DONE
 #     - include: tasks/apps/virtualbox/install.yml

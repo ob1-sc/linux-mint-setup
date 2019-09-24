@@ -4,7 +4,7 @@
 
 - name: Creates Vim directory
   become_user: "{{user}}"
-  file: 
+  file:
     path: /home/{{user}}/.vim
     state: directory
 
@@ -17,5 +17,5 @@
 - name: Setup Vim
   become_user: "{{user}}"
   copy:
-    src: tasks/apps/vim/.vimrc
+    src: files/.vimrc
     dest: /home/{{user}}/
