@@ -4,3 +4,29 @@
 - name: Setup Bash Aliases
   become_user: "{{user}}"
   script: files/setup-bash-aliases.sh
+
+- name: Install TLP
+  become: true
+  apt:
+    name: tlp
+  when: is_laptop.version is defined
+
+- name: Configure TLP
+  become: true
+  copy:
+    src: files/tlp
+    dest: /etc/default
+  when: is_laptop.version is defined
+
+- name: Install Powertop
+  become: true
+  apt:
+    name: powertop
+  when: is_laptop.version is defined
+
+- name: Set monitor refresh rate
+  become_user: "{{user}}"
+  copy:
+    src: files/monitors.xml
+    dest: /home/{{user}}/.config
+  when: is_laptop.version is defined
