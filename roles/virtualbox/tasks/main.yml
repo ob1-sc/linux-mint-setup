@@ -4,8 +4,8 @@
 
 - name: Add Virtualbox PPA
   apt_repository:
-    repo: deb https://download.virtualbox.org/virtualbox/debian "{{ubuntu_codename}}" contrib
+    repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian "{{ubuntu_codename}}" contrib
 
 - name: Install Virtualbox
   apt:
-    name: virtualbox-6.0
+    name: virtualbox-6.1
